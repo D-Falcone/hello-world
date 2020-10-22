@@ -1,0 +1,37 @@
+console.log("Just trying it out");
+
+// Collect input from a user
+
+prompt("Ask the magic 8-ball a question");
+
+const notMain = document.querySelector('main');
+let rando = Math.floor(Math.random() * 4) +1;
+
+if(rando == 4) {
+  notMain.innerHTML = 'As I see it, yes';
+
+} else if (rando == 3){
+ notMain.innerHTML = 'Ask again later';
+
+} else if (rando == 2) {
+ notMain.innerHTML = 'Cannot predict now';
+
+} else {
+ notMain.innerHTML = 'Don\'t count on it';
+}
+
+// Convert the input to a number
+// Use Math.random() and the user's number to generate a random number
+// Create a message displaying the random number
+
+/*
+Issues to check in the future:
+
+--Note the use of main: It need only identify the location in the variable. The variable can have any name you desire and it is this variable keyword you must use to indicate what the message must be later in keyWord.innerHTML
+
+--double check apostrophes in case you used one in your string. It caused an issue that was indicated with a problem after the { sign, which was confusing at first
+
+--if statements do NOT start with a capital I
+
+as proven in a previous challenge, you can call forth placeholder syntax (${}) for running code block in your if-then statements. Dont forget to use it within template literal. It was not used here, but you could have used it.
+*/
